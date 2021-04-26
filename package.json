@@ -1,0 +1,17 @@
+{
+  "name": "drug",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "ts-loader": "^9.1.1",
+    "vite": "^1.0.0-rc.13",
+    "vue-router": "^4.0.6"
+  }
+}

@@ -1,0 +1,14 @@
+<template>
+  <div>
+    <div>我是头</div>
+    <div>
+      <div>
+        我是left
+      </div>
+      <div>
+        我是content
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
+</template>
