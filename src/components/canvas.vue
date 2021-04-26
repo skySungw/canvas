@@ -4,13 +4,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Point from '../libs/Point.js';
+import CallBackFn from '../libs/CallbackFn.js';
 export default defineComponent({
   data() {
     return {
       width: 375,
       height: 500,
       canvas: null,
-      ctx: null
+      ctx: null,
+      callBackFn: new CallBackFn()
     };
   },
   mounted() {
@@ -60,6 +62,7 @@ export default defineComponent({
       }
     },
     addListenerEvent() {
+      const that = this;
       const list = this.getCanvasMethods();
       const canvas = this.canvas;
       const ctx = this.ctx;
@@ -70,6 +73,9 @@ export default defineComponent({
           list[v]();
           const flag = ctx.isPointInPath(e.clientX - canvasInfo.left, e.clientY - canvasInfo.top);
           console.log('flag', flag, v);
+          if (flag) {
+            that.callBackFn[v]();
+          }
         })
       })
     }
