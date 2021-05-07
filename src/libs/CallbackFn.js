@@ -8,5 +8,8 @@ class CallbackFn {
   draw2() {
     console.log("我是方法 draw2");
   }
+  drawInnerCicel() {
+    console.log("drawInnerCicel");
+  }
 }
 export default CallbackFn;
